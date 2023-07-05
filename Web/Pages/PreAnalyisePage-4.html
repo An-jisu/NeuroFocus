@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../css/normal.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<script>
+  //헤더 클릭시 메인으로 돌아감
+  const goHome = () => {
+    window.location.href = "./MainPage-1.html";
+  };
+
+  const newPage = () => {
+    window.location.href = "./StimulusDesignPage-5.html";
+  };
+</script>
+<header>
+  <h1 class="sixth" style="text-align: center; font-weight: 300" onclick="goHome()">
+    NeuroFocus
+  </h1>
+</header>
+
+<body>
+  <div class="box" style="margin-top: 90px">
+    <button
+      class="button button--winona button--border-thick button--round-l button--text-upper button--size-s button--text-thick"
+      data-text="시작 하기" onclick="newPage()">
+      <span>문제 맞춰보기</span>
+    </button>
+  </div>
+  <script type="module">
+    if (localStorage.getItem("answerHz")) {
+      var answerHz = localStorage.getItem("answerHz");
+    }
+    console.log("정답은? " + answerHz);
+    if (localStorage.getItem("quesIndex")) {
+      var quesIndex = localStorage.getItem("quesIndex");
+    }
+    console.log("질문 인덱스는?" + quesIndex);
+    if (localStorage.getItem("stage")) {
+      var stage = localStorage.getItem("stage");
+    }
+    console.log("스테이지는?" + stage);
+  </script>
+</body>
+
+</html>
